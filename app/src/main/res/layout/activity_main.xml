@@ -7,7 +7,7 @@
     >
 
     <LinearLayout
-        android:id="@+id/bottom_linear"
+        android:id="@+id/LLEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -17,31 +17,46 @@
             android:id="@+id/edit_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
             android:layout_weight="1"
+            android:autofillHints="@string/edit_text_placeholder"
+            android:inputType="text"
+            android:labelFor="@id/edit_text"
 
             />
 
         <Button
-            android:onClick="addItemToList"
+            android:id="@+id/buttonAdd"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add"
-            android:textStyle="bold"
-            />
+            android:onClick="addItemToList"
+            android:text="@string/btnAdd"
+            android:textStyle="bold" />
+
+<!--        <Button-->
+<!--            android:id="@+id/buttonUpdate"-->
+<!--            style="?android:attr/buttonBarButtonStyle"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:onClick="updateItem"-->
+<!--            android:text="@string/btnUpdate" />-->
     </LinearLayout>
 
+
     <LinearLayout
+        android:id="@+id/LinearLayoutUp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/bottom_linear"
-        android:background="@color/cardview_light_background"
-        >
+        android:layout_height="561dp"
+        android:layout_above="@+id/LLEditText"
+        android:layout_marginBottom="-5dp"
+        android:background="@color/design_default_color_on_primary"
+        android:orientation="vertical">
+
         <ListView
             android:id="@+id/list_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            >
+            android:layout_height="282dp">
 
 
         </ListView>

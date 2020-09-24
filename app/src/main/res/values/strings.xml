@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">TO-DO LIST</string>
-    <string name="sentence">This is not hello world</string>
-    <string name="my_button">this is button</string>
+    <string name="edit_text_placeholder">write something</string>
+    <string name="btnAdd">Add</string>
+    <string name="btnUpdate">Update</string>
 </resources>
 
